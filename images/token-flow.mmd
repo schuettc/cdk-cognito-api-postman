@@ -1,0 +1,17 @@
+sequenceDiagram
+    participant User
+    participant App
+    participant Cognito
+    participant API
+
+    User->>App: Login with credentials
+    App->>Cognito: Authenticate user
+    Cognito->>Cognito: Validate credentials
+    Cognito->>App: Return tokens (ID, Access, Refresh)
+    App->>App: Store tokens securely
+    App->>API: Request with Access Token
+    API->>API: Validate token
+    API->>App: Protected resource
+    Note over App: When Access Token expires
+    App->>Cognito: Use Refresh Token
+    Cognito->>App: New ID & Access Tokens

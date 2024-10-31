@@ -1,7 +1,11 @@
 {
   "dependencies": [
     {
-      "name": "@types/jest",
+      "name": "@aws-sdk/client-sso-oidc",
+      "type": "build"
+    },
+    {
+      "name": "@aws-sdk/client-sts",
       "type": "build"
     },
     {
@@ -20,7 +24,7 @@
     },
     {
       "name": "aws-cdk",
-      "version": "^2.1.0",
+      "version": "^2.118.0",
       "type": "build"
     },
     {
@@ -41,20 +45,7 @@
       "type": "build"
     },
     {
-      "name": "jest",
-      "type": "build"
-    },
-    {
-      "name": "jest-junit",
-      "version": "^15",
-      "type": "build"
-    },
-    {
       "name": "projen",
-      "type": "build"
-    },
-    {
-      "name": "ts-jest",
       "type": "build"
     },
     {
@@ -67,12 +58,16 @@
     },
     {
       "name": "aws-cdk-lib",
-      "version": "^2.1.0",
+      "version": "^2.118.0",
       "type": "runtime"
     },
     {
       "name": "constructs",
       "version": "^10.0.5",
+      "type": "runtime"
+    },
+    {
+      "name": "dotenv",
       "type": "runtime"
     }
   ],
